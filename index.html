@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>E-Library</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="el.html">Books:2 books</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact Us</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="books">
+        <h2>Available Books</h2>
+        <div class="book">
+            <img src="harry1.jpg" alt="book 1">
+            <h3>Harry potter and the philospher's stone</h3>
+            <p>Author: JK Rowling</p>
+            <p>Description: Its a story about a magical boy who lives with a muggle  family(non magical family)</p>
+            <p><a href="hp.pdf" target="_blank">Read in new browser tab </a></p>
+
+            <button type="button" class="collapsible">Read here...</button>
+<div class="content">
+    <object data="hp.pdf" type="application/pdf" width="100%" height="100%">
+      </object></div>
+        </div>
+        <div class="book">
+            <img src="junglebook.jpg" alt="book 2">
+            <h3>The Jungle book</h3>
+            <p>Author: Rudyard Kipling</p>
+            <p>Description: Story of an Indian Boy who grew up in a jungle with a family of the pack of wolves.</p>
+            <p><a href="Jungle.pdf" target="_blank">Read in new browser tab</a></p>
+
+            <button type="button" class="collapsible">Read here...</button>
+
+            
+            <div class="content">
+                <object data="Jungle.pdf" type="application/pdf" width="100%" height="100%">
+                  </object>
+            </div>
+        </div>
+    </section>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+    </script>
+    <footer>
+        <p>&copy; 2024 E-Library. All rights reserved.</p>
+    </footer>
+</body>
+</html>
